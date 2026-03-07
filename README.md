@@ -1,14 +1,14 @@
 # Pranshu Patel Portfolio Website
 
-A personal developer portfolio showcasing backend engineering projects, skills, and achievements.
+A personal developer portfolio showcasing backend engineering projects, technical skills, and development achievements.
 
-This portfolio highlights work focused on **Java backend development**, **Spring Boot API architecture**, and **secure system design**.
+The portfolio focuses on **Java backend development**, **Spring Boot API architecture**, **secure API design**, and **data structures & algorithms problem solving**.
 
 ---
 
 ## Live Website
 
-Not deployed yet.
+https://pranshu-patel.vercel.app
 
 ---
 
@@ -20,43 +20,44 @@ Not deployed yet.
 
 ## Features
 
-- Responsive portfolio website built with Next.js
+- Responsive developer portfolio built with Next.js
 - Smooth scrolling navigation
 - Backend-focused project showcase
-- GitHub project links
-- Resume download
+- GitHub repository links for projects
+- Resume download support
 - Contact form powered by EmailJS
-- Skills and backend technology stack
-- DSA achievements section
-- SEO metadata configuration
+- Skills and backend technology stack section
+- DSA achievements and problem-solving highlights
+- SEO and Open Graph metadata configuration
 
 ---
 
 ## Tech Stack
 
-Frontend Framework
+### Frontend
 
 - Next.js (App Router)
-
-Language
-
 - TypeScript
 
-Styling
+### Styling
 
-- TailwindCSS
+- Tailwind CSS
 
-Animation
+### Animation
 
 - Framer Motion
 
-Form Handling
+### Forms
 
 - React Hook Form
 
-Email Integration
+### Email Integration
 
 - EmailJS
+
+### Deployment
+
+- Vercel
 
 ---
 

@@ -15,7 +15,15 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Pranshu Patel | Java Backend Developer",
   description:
-    "Portfolio of Pranshu Patel, a Java backend developer focused on secure APIs, Spring Boot architecture, Dockerized services, and DSA-driven problem solving."
+    "Portfolio of Pranshu Patel, a Java backend developer focused on secure APIs, Spring Boot architecture, Dockerized services, and DSA-driven problem solving.",
+  openGraph: {
+    title: "Pranshu Patel | Java Backend Developer",
+    description:
+      "Java backend developer specializing in Spring Boot, secure API design, Docker deployment, and scalable backend architecture.",
+    url: "https://your-domain.com",
+    siteName: "Pranshu Patel Portfolio",
+    type: "website"
+  }
 };
 
 export default function RootLayout({

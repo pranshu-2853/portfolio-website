@@ -33,7 +33,7 @@ export default function Contact() {
     if (!serviceId || !templateId || !publicKey) {
       setSubmitStatus("error");
       setStatusMessage(
-        "Email service is not configured yet. Add NEXT_PUBLIC_EMAILJS_* values in .env.local."
+        "Email service is not configured. Please check environment variables."
       );
       return;
     }
@@ -54,10 +54,10 @@ export default function Contact() {
 
       reset();
       setSubmitStatus("success");
-      setStatusMessage("Message sent successfully. I will get back to you soon.");
+      setStatusMessage("Your message was sent successfully. I'll reply soon.");
     } catch {
       setSubmitStatus("error");
-      setStatusMessage("Could not send message. Please try again in a moment.");
+      setStatusMessage("Unable to send message right now. Please try again later.");
     }
   };
 
@@ -70,14 +70,22 @@ export default function Contact() {
         transition={{ duration: 0.45 }}
         className="surface-card mx-auto max-w-3xl p-6 sm:p-8"
       >
-        <p className="font-mono text-xs uppercase tracking-[0.18em] text-accentSoft">Contact</p>
-        <h2 className="section-title mt-3">Let&apos;s Build a Reliable Backend Together</h2>
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-accentSoft">
+          Contact
+        </p>
+
+        <h2 className="section-title mt-3">
+          Let's Work on Backend Systems Together
+        </h2>
+
         <p className="mt-3 text-sm text-mist">
-          This form uses EmailJS and routes messages to <strong>pranshu2853@gmail.com</strong>.
+          Have a backend project, collaboration, or opportunity in mind? Send a
+          message and I’ll get back to you.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
+
             <div>
               <label htmlFor="name" className="mb-1 block text-sm text-mist">
                 Name
@@ -85,10 +93,14 @@ export default function Contact() {
               <input
                 id="name"
                 type="text"
+                autoComplete="name"
+                required
                 className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white outline-none transition focus:border-accent"
                 {...register("name", { required: "Name is required." })}
               />
-              {errors.name && <p className="mt-1 text-xs text-red-300">{errors.name.message}</p>}
+              {errors.name && (
+                <p className="mt-1 text-xs text-red-300">{errors.name.message}</p>
+              )}
             </div>
 
             <div>
@@ -98,6 +110,8 @@ export default function Contact() {
               <input
                 id="email"
                 type="email"
+                autoComplete="email"
+                required
                 className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white outline-none transition focus:border-accent"
                 {...register("email", {
                   required: "Email is required.",
@@ -107,8 +121,11 @@ export default function Contact() {
                   }
                 })}
               />
-              {errors.email && <p className="mt-1 text-xs text-red-300">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="mt-1 text-xs text-red-300">{errors.email.message}</p>
+              )}
             </div>
+
           </div>
 
           <div>
@@ -118,10 +135,13 @@ export default function Contact() {
             <input
               id="subject"
               type="text"
+              required
               className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white outline-none transition focus:border-accent"
               {...register("subject", { required: "Subject is required." })}
             />
-            {errors.subject && <p className="mt-1 text-xs text-red-300">{errors.subject.message}</p>}
+            {errors.subject && (
+              <p className="mt-1 text-xs text-red-300">{errors.subject.message}</p>
+            )}
           </div>
 
           <div>
@@ -131,6 +151,7 @@ export default function Contact() {
             <textarea
               id="message"
               rows={5}
+              required
               className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white outline-none transition focus:border-accent"
               {...register("message", {
                 required: "Message is required.",
@@ -140,7 +161,9 @@ export default function Contact() {
                 }
               })}
             />
-            {errors.message && <p className="mt-1 text-xs text-red-300">{errors.message.message}</p>}
+            {errors.message && (
+              <p className="mt-1 text-xs text-red-300">{errors.message.message}</p>
+            )}
           </div>
 
           <button
@@ -152,7 +175,13 @@ export default function Contact() {
           </button>
 
           {submitStatus !== "idle" && (
-            <p className={`text-sm ${submitStatus === "success" ? "text-emerald-300" : "text-red-300"}`}>
+            <p
+              className={`text-sm ${
+                submitStatus === "success"
+                  ? "text-emerald-300"
+                  : "text-red-300"
+              }`}
+            >
               {statusMessage}
             </p>
           )}

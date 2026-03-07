@@ -18,31 +18,50 @@ export default function About() {
         className="grid gap-6 lg:grid-cols-5"
       >
         <motion.div variants={reveal} className="lg:col-span-2">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-accentSoft">About</p>
-          <h2 className="section-title mt-3">Backend Engineering With Security First Thinking</h2>
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-accentSoft">
+            About
+          </p>
+
+          <h2 className="section-title mt-3">
+            Backend Developer Focused on Secure API Design
+          </h2>
         </motion.div>
 
         <motion.article variants={reveal} className="surface-card p-6 lg:col-span-3">
           <p className="text-sm leading-relaxed text-mist sm:text-base">
-            I am a backend-oriented engineering student at L.D. College of Engineering, focused on
-            building secure and maintainable Spring Boot services. My work includes JWT
-            authentication, role-based access control, DTO architecture, exception handling,
-            pagination, and Dockerized deployment.
+            I am a backend-focused engineering student at{" "}
+            <span className="text-white font-medium">
+              L.D. College of Engineering
+            </span>
+            , specializing in building secure and scalable backend systems using
+            <span className="text-white"> Spring Boot</span>.
           </p>
+
           <p className="mt-4 text-sm leading-relaxed text-mist sm:text-base">
-            I enjoy translating business requirements into clean API contracts and robust service
-            layers that are easy to test and extend.
+            My experience includes designing REST APIs with JWT authentication,
+            role-based access control, DTO-based architecture, validation,
+            exception handling, pagination, and containerized deployment using
+            Docker.
+          </p>
+
+          <p className="mt-4 text-sm leading-relaxed text-mist sm:text-base">
+            I enjoy translating business requirements into clean API contracts
+            and building maintainable service layers that are easy to test,
+            extend, and scale.
           </p>
         </motion.article>
 
         <motion.article variants={reveal} className="surface-card p-6 lg:col-span-5">
           <h3 className="text-lg font-semibold text-white">Education</h3>
+
           <p className="mt-3 text-sm text-mist sm:text-base">
-            <span className="font-medium text-white">L.D. College of Engineering (LDCE)</span>
+            <span className="font-medium text-white">
+              L.D. College of Engineering (LDCE)
+            </span>
             <br />
-            Bachelor of Engineering - Information Technology
+            Bachelor of Engineering — Information Technology
             <br />
-            July 2023 - June 2027
+            July 2023 — June 2027
           </p>
         </motion.article>
       </motion.div>

@@ -46,7 +46,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.4 }}
-          className="surface-card mt-8 p-6"
+          className="surface-card scroll-mt-24 mt-8 p-6"
         >
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-emerald">DSA Achievements</p>
           <h3 className="mt-2 text-xl font-semibold text-white">

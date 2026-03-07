@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -16,11 +17,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       {project.image && (
         <div className="mb-4 overflow-hidden rounded-lg border border-white/10">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-40 w-full object-cover"
-          />
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={800}
+          height={400}
+          className="h-40 w-full object-cover"
+        />
         </div>
       )}  
       <h3 className="text-xl font-semibold text-white">{project.title}</h3>

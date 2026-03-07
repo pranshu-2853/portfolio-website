@@ -29,17 +29,25 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl"
         >
-          Pranshu Patel builds secure, scalable backend systems with clean API design.
+          Hi, I'm <span className="text-accent">Pranshu Patel</span>
         </motion.h1>
+
+        <motion.h2
+          variants={fadeUp}
+          transition={{ duration: 0.5 }}
+          className="mt-3 text-xl text-mist sm:text-2xl"
+        >
+          Java Backend Developer building secure and scalable APIs with Spring Boot.
+        </motion.h2>
 
         <motion.p
           variants={fadeUp}
           transition={{ duration: 0.5 }}
           className="mt-6 max-w-2xl text-base leading-relaxed text-mist sm:text-lg"
         >
-          Backend-focused engineering student specializing in Spring Boot APIs, JWT-based
-          authentication, role-based authorization, Dockerized delivery, and testable layered
-          architecture.
+          Backend-focused engineering student specializing in Spring Boot REST APIs,
+          JWT authentication, role-based authorization, and Dockerized backend systems.
+          Passionate about building clean, scalable backend architecture.
         </motion.p>
 
         <motion.div
@@ -53,11 +61,30 @@ export default function Hero() {
           >
             Explore Projects
           </a>
+
+          <a
+            href="https://github.com/pranshu-2853"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent/80 hover:text-accentSoft"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/pranshu-patel-gec-ldce-it-dte"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent/80 hover:text-accentSoft"
+          >
+            LinkedIn
+          </a>
+
           <a
             href="#contact"
             className="rounded-xl border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent/80 hover:text-accentSoft"
           >
-            Let&apos;s Connect
+            Let's Connect
           </a>
         </motion.div>
 
@@ -68,15 +95,23 @@ export default function Hero() {
         >
           <div className="surface-card px-4 py-4">
             <p className="text-2xl font-semibold text-white">200+</p>
-            <p className="mt-1 text-xs uppercase tracking-wide text-mist">DSA Problems Solved</p>
+            <p className="mt-1 text-xs uppercase tracking-wide text-mist">
+              DSA Problems Solved
+            </p>
           </div>
+
           <div className="surface-card px-4 py-4">
             <p className="text-2xl font-semibold text-white">10+</p>
-            <p className="mt-1 text-xs uppercase tracking-wide text-mist">REST Endpoints Built</p>
+            <p className="mt-1 text-xs uppercase tracking-wide text-mist">
+              REST Endpoints Built
+            </p>
           </div>
+
           <div className="surface-card px-4 py-4">
             <p className="text-2xl font-semibold text-white">2027</p>
-            <p className="mt-1 text-xs uppercase tracking-wide text-mist">B.E. IT Graduation</p>
+            <p className="mt-1 text-xs uppercase tracking-wide text-mist">
+              B.E. IT Graduation
+            </p>
           </div>
         </motion.div>
       </motion.div>

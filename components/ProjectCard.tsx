@@ -14,9 +14,33 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       transition={{ type: "spring", stiffness: 260, damping: 22 }}
       className="surface-card flex h-full flex-col p-6"
     >
+      {project.image && (
+        <div className="mb-4 overflow-hidden rounded-lg border border-white/10">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="h-40 w-full object-cover"
+          />
+        </div>
+      )}  
       <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-      <p className="mt-3 text-sm leading-relaxed text-mist">{project.description}</p>
+      <p className="mt-3 text-sm leading-relaxed text-mist">
+        {project.description}
+      </p>
 
+      {/* Highlights */}
+      {project.highlights && (
+        <ul className="mt-4 space-y-1 text-sm text-mist">
+          {project.highlights.map((point) => (
+            <li key={point} className="flex gap-2">
+              <span className="text-accent">•</span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {/* Tech stack */}
       <div className="mt-5 flex flex-wrap gap-2">
         {project.tech.map((item) => (
           <span
@@ -28,6 +52,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </div>
 
+      {/* GitHub button */}
       <div className="mt-6 flex items-center gap-3">
         <a
           href={project.github}

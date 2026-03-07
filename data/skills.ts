@@ -12,9 +12,7 @@ export const skillCategories: SkillCategory[] = [
       "Spring Security",
       "REST APIs",
       "Hibernate",
-      "JDBC",
-      "Servlets",
-      "JSP"
+      "JDBC"
     ]
   },
   {
@@ -24,8 +22,8 @@ export const skillCategories: SkillCategory[] = [
       "Dependency Injection",
       "DTO Pattern",
       "JWT Authentication",
-      "Role-Based Access Control",
-      "Pagination & Sorting",
+      "RBAC",
+      "Pagination",
       "Transaction Management"
     ]
   },
@@ -44,7 +42,7 @@ export const skillCategories: SkillCategory[] = [
 ];
 
 export const dsaAchievement: DsaAchievement = {
-  solvedCount: "200+",
+  solvedCount: "Solved 200+ Data Structures & Algorithms problems",
   topics: [
     "Arrays",
     "Strings",

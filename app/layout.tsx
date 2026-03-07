@@ -20,9 +20,17 @@ export const metadata: Metadata = {
     title: "Pranshu Patel | Java Backend Developer",
     description:
       "Java backend developer specializing in Spring Boot, secure API design, Docker deployment, and scalable backend architecture.",
-    url: "https://your-domain.com",
+    url: "https://pranshu-patel.vercel.app/",
     siteName: "Pranshu Patel Portfolio",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pranshu Patel Portfolio"
+      }
+    ]
   }
 };
 

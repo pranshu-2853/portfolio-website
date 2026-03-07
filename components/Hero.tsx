@@ -29,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl"
         >
-          Hi, I'm <span className="text-accent">Pranshu Patel</span>
+          Hi, I&apos;m <span className="text-accent">Pranshu Patel</span>
         </motion.h1>
 
         <motion.h2
@@ -84,7 +84,7 @@ export default function Hero() {
             href="#contact"
             className="rounded-xl border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent/80 hover:text-accentSoft"
           >
-            Let's Connect
+            Let&apos;s Connect
           </a>
         </motion.div>
 

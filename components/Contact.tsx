@@ -54,7 +54,7 @@ export default function Contact() {
 
       reset();
       setSubmitStatus("success");
-      setStatusMessage("Your message was sent successfully. I'll reply soon.");
+      setStatusMessage("Your message was sent successfully. I&apos;ll reply soon.");
     } catch {
       setSubmitStatus("error");
       setStatusMessage("Unable to send message right now. Please try again later.");
@@ -75,12 +75,12 @@ export default function Contact() {
         </p>
 
         <h2 className="section-title mt-3">
-          Let's Work on Backend Systems Together
+          Let&apos;s Work on Backend Systems Together
         </h2>
 
         <p className="mt-3 text-sm text-mist">
           Have a backend project, collaboration, or opportunity in mind? Send a
-          message and I’ll get back to you.
+          message and I&apos;ll get back to you.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-4">

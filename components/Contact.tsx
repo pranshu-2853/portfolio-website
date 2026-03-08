@@ -54,7 +54,7 @@ export default function Contact() {
 
       reset();
       setSubmitStatus("success");
-      setStatusMessage("Your message was sent successfully. I&apos;ll reply soon.");
+      setStatusMessage("Your message was sent successfully. I'll reply soon.");
     } catch {
       setSubmitStatus("error");
       setStatusMessage("Unable to send message right now. Please try again later.");

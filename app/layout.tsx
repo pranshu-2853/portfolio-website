@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   title: "Pranshu Patel | Java Backend Developer",
   description:
     "Portfolio of Pranshu Patel, a Java backend developer focused on secure APIs, Spring Boot architecture, Dockerized services, and DSA-driven problem solving.",
+
+    icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  
   openGraph: {
     title: "Pranshu Patel | Java Backend Developer",
     description:

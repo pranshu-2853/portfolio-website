@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { projects } from "@/data/projects";
+import { skillCategories } from "@/data/skills";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -12,21 +14,82 @@ const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"]
 });
 
-export const metadata: Metadata = {
-  title: "Pranshu Patel | Java Backend Developer",
-  description:
-    "Portfolio of Pranshu Patel, a Java backend developer focused on secure APIs, Spring Boot architecture, Dockerized services, and DSA-driven problem solving.",
+const BASE_URL = "https://pranshu-patel.vercel.app" as const;
 
-    icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+const skillKeywords = skillCategories.flatMap((category) => category.items);
+const projectTechKeywords = projects.flatMap((project) => project.tech);
+
+const baseDescription =
+  "Pranshu Patel is a backend developer specializing in Spring Boot, REST APIs, scalable Java applications, and DSA.";
+
+const keywords = Array.from(
+  new Set([
+    "Java backend developer",
+    "Backend developer",
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "JWT authentication",
+    "RBAC",
+    "Docker",
+    "Hibernate",
+    "MySQL",
+    "PostgreSQL",
+    "Data Structures and Algorithms",
+    "DSA",
+    ...skillKeywords,
+    ...projectTechKeywords
+  ])
+);
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${BASE_URL}#person`,
+  name: "Pranshu Patel",
+  url: BASE_URL,
+  jobTitle: "Backend Developer",
+  description: baseDescription,
+  sameAs: [
+    "https://github.com/pranshu-2853",
+    "https://www.linkedin.com/in/pranshu-patel-gec-ldce-it-dte"
+  ]
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}#website`,
+  url: BASE_URL,
+  name: "Pranshu Patel Portfolio",
+  description: baseDescription,
+  inLanguage: "en"
+};
+
+const jsonLd = [personJsonLd, websiteJsonLd];
+
+export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "Pranshu Patel | Backend Developer",
+    template: "%s | Pranshu Patel"
   },
-  
+  description: baseDescription,
+  keywords,
+
+  // ✅ GOOGLE VERIFICATION ADDED HERE
+  verification: {
+    google: "b4nLZ7qfM-PQnzupUD06gTDgW8VKHDcDaDVGMsX1JI0"
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png"
+  },
   openGraph: {
-    title: "Pranshu Patel | Java Backend Developer",
-    description:
-      "Java backend developer specializing in Spring Boot, secure API design, Docker deployment, and scalable backend architecture.",
-    url: "https://pranshu-patel.vercel.app/",
+    title: "Pranshu Patel | Backend Developer",
+    description: baseDescription,
+    url: BASE_URL,
     siteName: "Pranshu Patel Portfolio",
     type: "website",
     images: [
@@ -37,6 +100,12 @@ export const metadata: Metadata = {
         alt: "Pranshu Patel Portfolio"
       }
     ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pranshu Patel | Backend Developer",
+    description: baseDescription,
+    images: ["/og-image.png"]
   }
 };
 
@@ -47,6 +116,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${spaceGrotesk.variable} ${jetBrainsMono.variable} font-sans text-white antialiased`}
       >

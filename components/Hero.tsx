@@ -101,9 +101,9 @@ export default function Hero() {
           </div>
 
           <div className="surface-card px-4 py-4">
-            <p className="text-2xl font-semibold text-white">10+</p>
+            <p className="text-2xl font-semibold text-white">2</p>
             <p className="mt-1 text-xs uppercase tracking-wide text-mist">
-              REST Endpoints Built
+              BACKEND PROJECTS BUILT
             </p>
           </div>
 

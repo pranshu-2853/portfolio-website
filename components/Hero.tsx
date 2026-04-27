@@ -94,7 +94,7 @@ export default function Hero() {
           className="mt-10 grid gap-3 sm:grid-cols-3"
         >
           <div className="surface-card px-4 py-4">
-            <p className="text-2xl font-semibold text-white">200+</p>
+            <p className="text-2xl font-semibold text-white">300+</p>
             <p className="mt-1 text-xs uppercase tracking-wide text-mist">
               DSA Problems Solved
             </p>

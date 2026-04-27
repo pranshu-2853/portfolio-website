@@ -10,7 +10,7 @@ export const projects: Project[] = [
       "Spring Boot",
       "Spring Security",
       "Hibernate",
-      "MySQL",
+      "PostgreSQL",
       "Docker",
       "JUnit 5",
       "Mockito"

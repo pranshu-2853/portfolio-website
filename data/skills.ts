@@ -11,29 +11,31 @@ export const skillCategories: SkillCategory[] = [
       "Spring Boot",
       "Spring Security",
       "REST APIs",
-      "Hibernate",
-      "JDBC"
+      "Hibernate"
     ]
   },
   {
     title: "Concepts",
     items: [
-      "Layered Architecture",
-      "Dependency Injection",
       "DTO Pattern",
+      "Transaction Management",
+      "Pessimistic Locking",
+      "Idempotency",
       "JWT Authentication",
       "RBAC",
-      "Pagination",
-      "Transaction Management"
+      "JPA Specifications",
+      "Exception Handling",
+      "Input Validation",
+      "Logging"
     ]
   },
   {
     title: "Databases",
-    items: ["PostgreSQL", "MySQL"]
+    items: ["PostgreSQL", "MySQL", "Redis"]
   },
   {
     title: "DevOps & Tools",
-    items: ["Docker", "Git", "Maven", "Postman"]
+    items: ["Docker", "Git", "Maven", "Postman", "Swagger/OpenAPI", "Flyway"]
   },
   {
     title: "Testing",
@@ -42,7 +44,7 @@ export const skillCategories: SkillCategory[] = [
 ];
 
 export const dsaAchievement: DsaAchievement = {
-  solvedCount: "Solved 200+ Data Structures & Algorithms problems",
+  solvedCount: "Solved 300+ Data Structures & Algorithms problems",
   topics: [
     "Arrays",
     "Strings",
@@ -51,12 +53,14 @@ export const dsaAchievement: DsaAchievement = {
     "Queues",
     "Trees",
     "Heaps",
+    "Graphs",
     "Binary Search",
     "Sliding Window",
     "Two Pointers",
     "Recursion & Backtracking",
     "Greedy Algorithms",
     "Prefix Sum",
-    "Hashing"
+    "Hashing",
+    "Dynamic Programming"
   ]
 };

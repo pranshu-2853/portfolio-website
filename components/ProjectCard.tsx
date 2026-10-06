@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <motion.article
       whileHover={{ y: -4, scale: 1.01 }}
       transition={{ type: "spring", stiffness: 260, damping: 22 }}
-      className="surface-card flex h-full flex-col p-6"
+      className="surface-card flex h-full min-w-0 flex-col p-6"
     >
       {project.image && (
         <div className="mb-4 overflow-hidden rounded-lg border border-white/10">
@@ -56,7 +56,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* GitHub button */}
-      <div className="mt-6 flex items-center gap-3">
+      <div className="mt-auto flex items-center gap-3 pt-6">
         <a
           href={project.github}
           target="_blank"
